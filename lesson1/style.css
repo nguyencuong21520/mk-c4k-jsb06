@@ -10,10 +10,36 @@
     font-family: 'Roboto', sans-serif;
 }
 .item{
-    width: 20%;
+    width: 50%;
     background: whitesmoke;
     text-align: center;
     padding: 10px 8px
+}
+
+#total{
+    background: rgb(223, 191, 191);
+    width: 140px;
+    height:20px;
+    padding:3px 0px;
+    border-radius:20px;
+    position: relative;
+}
+#total span{
+    z-index: 99;
+    position: absolute;
+    left:50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+#value{
+    width: 50%;
+    height:100%;
+    background:yellow;
+    position: absolute;
+    top: 0px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 .item img{
     width: 95%;
