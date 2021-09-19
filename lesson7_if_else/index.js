@@ -12,7 +12,6 @@
 //     console.log("a nhỏ hơn 50");
 // }
 
-
 // let age = prompt("hãy nhập tuổi của bạn")
 // age = Number(age)
 
@@ -37,43 +36,56 @@
 //     console.log("bạn đã già");
 // }
 
-
 // for(let i = 0; i<=100; i++){
 //     if(i%5 == 0){
 //         console.log(i);
 //     }
 // }
 
+// function hoaiDongBuoiSang(thu){
+//     console.log("thứ " + thu); ///=> thứ 2
+//     console.log("thức dậy");
+//     console.log("đánh răng");
+//     console.log("ăn sáng");
+// }
 
-function hoaiDongBuoiSang(thu){
-    console.log("thứ " + thu); ///=> thứ 2
-    console.log("thức dậy");
-    console.log("đánh răng");
-    console.log("ăn sáng");
+// function tinhTong(b,a){
+//     console.log(`Kết quả của ${a} + ${b} là ${a+b} `);
+// }
+// function tinhHieu(a,b){
+//     console.log(`Kết quả của ${a} - ${b} là ${a-b} `);
+// }
+// function tinhTich(a,b){
+//     console.log(`Kết quả của ${a} x ${b} là ${a*b} `);
+// }
+// function tinhThuong(a,b){
+//     if(b == 0){
+//         console.log("không hợp lệ");
+//     }else{
+//         console.log(`Kết quả của ${a} / ${b} là ${a/b} `);
+//     }
+// }
+
+// function tinhTong1(b,a){
+//     let sum = a+ b
+//     return sum
+// }
+
+let grade = prompt("Enter a grade: ");
+grade = Number(grade); //chuyển từ string sang số
+if (grade) {
+  //nếu ng dùng nhập vào số thì chạy, k thì báo lỗi
+  if (grade > 9) {
+    console.log("A");
+  } else if (grade > 7.9) {
+    console.log("B");
+  } else if (grade > 7) {
+    console.log("C");
+  } else if (grade > 5) {
+    console.log("D");
+  } else {
+    console.log("F");
+  }
+} else {
+  console.log("Grade phải nhập vào là số");
 }
-
-function tinhTong(b,a){
-    console.log(`Kết quả của ${a} + ${b} là ${a+b} `); 
-}
-function tinhHieu(a,b){
-    console.log(`Kết quả của ${a} - ${b} là ${a-b} `); 
-}
-function tinhTich(a,b){
-    console.log(`Kết quả của ${a} x ${b} là ${a*b} `); 
-}
-function tinhThuong(a,b){
-    if(b == 0){
-        console.log("không hợp lệ");
-    }else{
-        console.log(`Kết quả của ${a} / ${b} là ${a/b} `); 
-    }
-}
-
-
-function tinhTong1(b,a){
-    let sum = a+ b
-    return sum
-}
-
-
-
