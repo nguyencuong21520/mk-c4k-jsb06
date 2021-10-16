@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css"
+    />
+  </head>
+  <body>
+    <div id="a" class="splide">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide">
+            <div class="cart">
+              <h1>Alo</h1>
+              <img src="https://picsum.photos/200/300" alt="" />
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="cart">
+              <h1>Alo</h1>
+              <img src="https://picsum.photos/200/300" alt="" />
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="cart">
+              <h1>Alo</h1>
+              <img src="https://picsum.photos/200/300" alt="" />
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="b" class="splide">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide">Slide 01</li>
+          <li class="splide__slide">Slide 02</li>
+          <li class="splide__slide">Slide 03</li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+    <script>
+      new Splide("#a").mount();
+      new Splide("#b", {
+        type: "loop",
+        perPage: 3,
+        focus: "center",
+      }).mount();
+    </script>
+  </body>
+</html>
