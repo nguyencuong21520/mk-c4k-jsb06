@@ -49,25 +49,27 @@ let data = [
   },
 ];
 
-let domFruit = document.querySelector("#inputFruit");
-let anh = document.querySelector("#anh")
-let qua = document.querySelector("#qua")
+let form_input = document.querySelector("#inputFruit");
+let anh = document.querySelector("#anh");
+let ten = document.querySelector("#qua");
 
-domFruit.addEventListener("submit", function (e) {
+
+form_input.onsubmit = function (e) {
   e.preventDefault();
 
-  let fruit = domFruit.key.value;
+  let key = form_input.Hung.value;
 
   for (let i = 0; i < data.length; i++) {
-      if(fruit.toLowerCase() == data[i].name.toLowerCase()){
-          anh.src = data[i].url
-          qua.innerHTML = `Quả ${data[i].name}`
-          break
-      }else{
-        anh.src = "https://bizflyportal.mediacdn.vn/bizflyportal/459/347/2020/06/02/17/37/70515910726734841.jpg"
-        qua.innerHTML = `Tôi k tìm thấy`
-      }
+    if (data[i].name.toLowerCase() == key.toLowerCase()) {
+      // console.log(data[i]);
+      anh.src = data[i].url;
+      ten.innerHTML = "Quả " + data[i].name;
+    }else{
+      anh.src = "https://cdn.tgdd.vn/hoi-dap/580732/loi-404-not-found-la-gi-9-cach-khac-phuc-loi-404-not-3-800x534.jpg";
+      ten.innerHTML = " K tìm thấy"
+    }
   }
-});
 
+  form_input.Hung.value = "";
+};
 

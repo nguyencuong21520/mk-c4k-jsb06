@@ -26,7 +26,6 @@
 
 // console.log(arrFruits);
 
-
 // // cho phép người dùng dùng prompt để nhập 3 món ăn bất kì
 // // sau đó lưu 3 món ăn đó vào 1 mảng (array) và alert ra món thử 2 ng dùng nhập
 
@@ -49,12 +48,12 @@
 // let tao = {
 //     name: "Táo",
 //     color: "đỏ",
-//     taste: "ngọt" 
+//     taste: "ngọt"
 // }
 
 // //read
 // console.log(chuoi.color);
-// // console.log(chuoi["color"]); // biết thêm 
+// // console.log(chuoi["color"]); // biết thêm
 
 // //update
 // chuoi.color = "tím"
@@ -66,7 +65,6 @@
 
 // console.log(chuoi);
 
-
 // loop
 // for("giá trị bắt đầu"; điều kiện; bước nhảy){
 
@@ -77,11 +75,42 @@
 //     console.log("hello" + i);
 // }
 
-for(let i=10; i<20;  i=i+2){
-        console.log(i);
-}
+// for(let i=10; i<20;  i=i+2){
+//         console.log(i);
+// }
 // in ra các số chẵn từ 0 - 20
 
-
 // while // về nhà tìm hiểu thêm
+
+// let x = "thon"
+
+// Python
+// if(x[0] == "p" && x[1] == "y"){
+//         console.log(x);
+// }else{
+//         console.log("py" + x);
+// }
+
+// let ar = [1,2,3,4,5,6,7,8,9,10];
+
+// let a = 3
+// let b = 7
+
+// let result = []
+
+// for(let i = 0; i < ar.length; i++){
+//       if(ar[i]> a && ar[i]<b) {
+//               result.push(ar[i]);
+//       } 
+// }
+
+// let result = ar.filter((e)=>{
+//          return e>a && e<b
+// })
+
+// console.log(result);
+
+
+
+
 
