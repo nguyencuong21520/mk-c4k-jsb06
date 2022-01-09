@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        #t{
+            font-size:200px;
+            color: orange;
+        }
+    </style>
+  </head>
+  <body>
+    <p id="t">12:05:23</p>
+
+    <script>
+      function getTime() {
+        let d = new Date();
+        let hours = d.getHours();
+        let minutes = d.getMinutes();
+        let seconds = d.getSeconds();
+
+        let h = 0;
+        let m = 0;
+        let s = 0;
+
+        if (hours < 10) {
+          h = "0" + hours;
+        } else {
+          h = hours;
+        }
+        if (minutes < 10) {
+          m = "0" + minutes;
+        } else {
+          m = minutes;
+        }
+        if (seconds < 10) {
+          s = "0" + seconds;
+        } else {
+          s = seconds;
+        }
+        document.querySelector("#t").innerHTML = `${h}:${m}:${s}`;
+      }
+
+      setInterval(getTime, 1000);
+    </script>
+  </body>
+</html>
