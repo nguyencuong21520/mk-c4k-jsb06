@@ -49,6 +49,7 @@ signUpform.onsubmit = (e) =>{
         }
         users.push(user)
         localStorage.setItem("users", JSON.stringify(users))
+        alert("Sign Up Successful")
     }
 }
 

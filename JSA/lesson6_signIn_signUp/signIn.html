@@ -25,6 +25,10 @@
         align-items: center;
         height: 100vh;
       }
+      .form-text {
+        color: red;
+        /* font-style: italic; */
+      }
     </style>
   </head>
   <body>
@@ -42,9 +46,7 @@
             aria-describedby="emailHelp"
             name="email"
           />
-          <div id="emailHelp" class="form-text">
-            We'll never share your email with anyone else.
-          </div>
+          <div id="emailErr" class="form-text"></div>
         </div>
         <div class="mb-3">
           <label for="exampleInputPassword1" class="form-label">Password</label>
@@ -54,6 +56,7 @@
             id="exampleInputPassword1"
             name="password"
           />
+          <div id="passwordErr" class="form-text"></div>
         </div>
         <div class="mb-3 form-check">
           <input
@@ -66,8 +69,7 @@
             >Show password</label
           >
         </div>
-
-        <p>Create An Account? <a href="./signUp.html">SignUp</a> </p>
+        <p>Not yet member? <a href="./signUp.html">Sign Up</a></p>
         <button type="submit" class="btn btn-success">Login</button>
       </form>
     </div>
