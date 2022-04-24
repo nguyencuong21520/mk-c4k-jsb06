@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <canvas id="myChart"></canvas>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+    <script>
+      const ctx = document.getElementById("myChart").getContext("2d");
+
+      let getData = async () => {
+        let drawData = await fetch(
+          "https://api.weatherapi.com/v1/forecast.json?key=44ab760595ba41e7a4680133222401&q=London&days=3&aqi=yes&alerts=no"
+        );
+
+        let data = await drawData.json();
+        let forecast = data.forecast.forecastday;
+        console.log(forecast);
+
+        let avgtemp_c  = forecast.map((e) => {
+          return e.day.avgtemp_c;
+        });
+        console.log(avgtemp_c);
+
+
+
+        const myChart = new Chart(ctx, {
+          type: "line",
+          data: {
+            labels: ["2019-09-01", "2019-09-02", "2019-09-03"],
+            datasets: [
+              {
+                label: "Death",
+                data: avgtemp_c ,
+                backgroundColor: [
+                  "rgba(255, 99, 132, 0.2)",
+                  "rgba(54, 162, 235, 0.2)",
+                  "rgba(255, 206, 86, 0.2)",
+
+                ],
+                borderColor: [
+                  "rgba(255, 99, 132, 1)",
+                  "rgba(54, 162, 235, 1)",
+                  "rgba(255, 206, 86, 1)",
+
+                ],
+                borderWidth: 3,
+              },
+              {
+                label: "In treatment",
+                data: [5,6,7],
+                backgroundColor: [
+                  "rgba(255, 99, 132, 0.2)",
+                  "rgba(54, 162, 235, 0.2)",
+                  "rgba(255, 206, 86, 0.2)",
+ 
+                ],
+                borderColor: [
+                  "rgba(255, 99, 132, 1)",
+                  "rgba(54, 162, 235, 1)",
+                  "rgba(255, 206, 86, 1)",
+
+                ],
+                borderWidth: 3,
+              },
+            ],
+          },
+          options: {
+            plugins: {
+              title: {
+                display: true,
+                text: "COVID-19 Chart",
+                padding: {
+                  top: 100,
+                  bottom: 10,
+                },
+              },
+              subtitle: {
+                display: true,
+                text: "Static for the last 7 days",
+                //   font: {weight: 'bold'}
+              },
+            },
+            element: {
+              line: {
+                tension: 1,
+              },
+            },
+            scales: {
+                
+            },
+          },
+        });
+      };
+
+      getData();
+    </script>
+  </body>
+</html>
